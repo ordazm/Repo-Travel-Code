@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Fenix&family=Poppins:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fenix&family=Poppins:wght@100;200;300;400;500&family=Pushster&display=swap");
+/* 
+font-family: 'Fenix', serif;
+font-family: 'Poppins', sans-serif; 
+font-family: 'Pushster', cursive;
+*/
+
+.dinogame {
+	height: 50vh;
+	background: #fff;
+	display: flex;
+	align-items: center;
+}
+
+.contenedor {
+	width: 920px;
+	height: 280px;
+	margin: 0 auto;
+
+	position: relative;
+
+	background: linear-gradient(#b7d6c7, transparent) #ffe2d1; /*linear-gradient(#90ebff, white);*/
+	transition: background-color 1s linear;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.mediodia {
+	background-color: #ffdcf3;
+}
+
+.tarde {
+	background-color: #ffadad;
+}
+
+.noche {
+	background-color: #aca8c7;
+}
+
+.dino {
+	width: 84px;
+	height: 84px;
+
+	position: absolute;
+	bottom: 22px;
+	left: 42px;
+	z-index: 2;
+
+	background: url(/img/images1.png) repeat-x 0px 0px;
+	background-size: 336px 84px;
+	background-position-x: 0px;
+}
+
+.dino-corriendo {
+	animation: animarDino 0.25s steps(2) infinite;
+}
+.dino-estrellado {
+	background-position-x: -252px;
+}
+
+.suelo {
+	width: 200%;
+	height: 42px;
+
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	background: url(/img/suelo.png) repeat-x 0px 0px;
+	background-size: 50% 42px;
+}
+
+.cactus {
+	width: 46px;
+	height: 96px;
+
+	position: absolute;
+	bottom: 16px;
+	left: 600px;
+	z-index: 1;
+
+	background: url(/img/cactus1.png) no-repeat;
+}
+.cactus2 {
+	width: 98px;
+	height: 66px;
+
+	background: url(/img/cactus2.png) no-repeat;
+}
+
+.nube {
+	width: 92px;
+	height: 26px;
+
+	position: absolute;
+	z-index: 0;
+
+	background: url(/img/nube.png) no-repeat;
+	background-size: 92px 29px;
+}
+.score {
+	width: 100px;
+	height: 30px;
+
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	z-index: 10;
+
+	color: #dd505b;
+	font-family: Verdana;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.game-over {
+	display: none;
+
+	position: absolute;
+	width: 100%;
+
+	text-align: center;
+	color: #dd505b;
+	font-size: 30px;
+	font-family: "Pushster", cursive;
+	font-weight: 700;
+	transition: 0.5s;
+}
+
+@keyframes animarDino {
+	from {
+		background-position-x: -84px;
+	}
+	to {
+		background-position-x: -252px;
+	}
+}
